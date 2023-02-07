@@ -41,3 +41,16 @@ class Solution:
             chars.add(char)
             max_len = max(max_len, i - start + 1)
         return max_len
+
+''' 
+    Algorithm:
+    We use the sliding window technique.
+    -We use max_len and start as pointers to keep track of the substring.
+    -We create a set to add all the unique characters.
+    -We iterate over the string, for each character we:
+        -While the char is in the substring we remove the character at start, and increment it to shrink the substring.
+        This way it only contains unique characters.
+        -We add the char to the substring.
+        -We update max_len, if the current substring is larger (i - start +1) we update it.
+
+'''
