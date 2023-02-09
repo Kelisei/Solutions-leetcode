@@ -35,7 +35,4 @@ class Solution:
                 num = num // 10
             if x < 0:
                 reverse *= -1
-            if reverse == x:
-                return True
-            else:
-                return False
+            return reverse == x
